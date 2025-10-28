@@ -67,7 +67,7 @@ void I2C_INIT(void)
 	PINSEL0=SCL|SDA;
 	I2SCLL=LOAD_VAL;
 	I2SCLH=LOAD_VAL;
-	I2CONSET=I2CEN;		
+	I2CONSET=1<<I2CEN;		
 }
 
 void I2C_START(void)
@@ -114,3 +114,4 @@ void delay_ms(int ms)
 	T0TCR=0X03;
 	T0TCR=0X0;
 }
+
